@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("./assets/fonts/Aeonik-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-bg-primary: #0C0E13;
+  --color-bg-secondary: #323232;
+  --color-bg-tertiary: #3d3d3d;
+  --color-ev: #4672FF;
+  --font-sans: "Aeonik", ui-sans-serif, system-ui, sans-serif;
+  --breakpoint-desktop: 64rem;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+  background: #0C0E13;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  font-family: "Aeonik", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes tape-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tape-in {
+  animation: tape-in 320ms ease-out;
+}
+
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #0C0E13;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-button,
+*::-webkit-scrollbar-button:start:decrement,
+*::-webkit-scrollbar-button:end:increment,
+*::-webkit-scrollbar-button:vertical:start:increment,
+*::-webkit-scrollbar-button:vertical:end:decrement,
+*::-webkit-scrollbar-button:vertical:decrement,
+*::-webkit-scrollbar-button:vertical:increment,
+*::-webkit-scrollbar-button:horizontal:decrement,
+*::-webkit-scrollbar-button:horizontal:increment,
+*::-webkit-scrollbar-button:single-button,
+*::-webkit-scrollbar-button:double-button {
+  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0C0E13;
+  margin-block: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 2px solid #0C0E13;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-corner {
+  background: #0C0E13;
+}

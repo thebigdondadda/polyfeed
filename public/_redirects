@@ -1,0 +1,3 @@
+/api/*   https://data-api.polymarket.com/:splat   200
+/gamma/* https://gamma-api.polymarket.com/:splat  200
+/clob/*  https://clob.polymarket.com/:splat       200
